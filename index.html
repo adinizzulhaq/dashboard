@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="login-area d-flex gap-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            id="inputUsername"
+          />
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            id="inputPassword"
+          />
+          <button type="button" class="btn btn-login" id="loginButton">
+            Masuk
+          </button>
+          <button type="button" class="btn btn-login" id="logoutButton">
+            Keluar
+          </button>
+        </form>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Hallo, Selamat Datang!
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-house" style="margin-right: 0.5rem"></i
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-person" style="margin-right: 0.5rem"></i>Data
+                  Siswa</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-clipboard" style="margin-right: 0.5rem"></i
+                  >Tugas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i
+                    class="bi bi-currency-dollar"
+                    style="margin-right: 0.5rem"
+                  ></i
+                  >Keuangan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i
+                    class="bi bi-question-circle"
+                    style="margin-right: 0.5rem"
+                  ></i
+                  >Bantuan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-gear" style="margin-right: 0.5rem"></i
+                  >Pengaturan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Database Start -->
+    <section id="database" class="database">
+      <div class="container database-container">
+        <div class="row justify-content-lg-between justify-content-center">
+          <div class="col-lg-3 col-10 mb-lg-0 mb-3 data-siswa">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-6">
+                <h1>40</h1>
+                <p>Mahasiswa</p>
+              </div>
+              <div class="col-4">
+                <i class="bi bi-person" style="font-size: 3.5rem"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-10 mb-lg-0 mb-3 data-tugas">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-6">
+                <h1>10</h1>
+                <p>Tugas</p>
+              </div>
+              <div class="col-4">
+                <i class="bi bi-clipboard" style="font-size: 3.5rem"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-10 mb-lg-0 mb-3 data-biaya">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-6">
+                <h1>5Juta</h1>
+                <p>Uang Kas</p>
+              </div>
+              <div class="col-4">
+                <i class="bi bi-currency-dollar" style="font-size: 3.5rem"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Database End -->
+
+    <!-- Detail Database Start -->
+    <section id="details" class="details">
+      <div class="container details-container mt-5">
+        <div class="row justify-content-between">
+          <div class="col-lg-8 col-12 mb-lg-0 mb-3 data-payment">
+            <div class="row">
+              <div
+                class="col-12 d-flex justify-content-between align-items-center border-bottom pb-3 pt-3"
+              >
+                <h3>Data Pembayaran</h3>
+                <button class="btn btn-details">Lihat Semua</button>
+              </div>
+              <div class="row text-center">
+                <div class="col-lg-4 col-6 mt-3">
+                  <h6>Nama</h6>
+                  <hr />
+                  <p>Adin Izulhaq</p>
+                  <p>Muhammad Emirsyah</p>
+                  <p>Bagus Wicaksana</p>
+                  <p>Aji Putra Ismanto</p>
+                </div>
+                <div class="col-lg-2 col-6 mt-3">
+                  <h6>Kelas</h6>
+                  <hr />
+                  <p>RV</p>
+                  <p>RV</p>
+                  <p>RV</p>
+                  <p>RV</p>
+                </div>
+                <div class="col-lg-2 col-6 mt-3">
+                  <h6>Pembayaran</h6>
+                  <hr />
+                  <p>Rp1.080.000,-</p>
+                  <p>Rp60.000,-</p>
+                  <p>Rp291.000,-</p>
+                  <p>Rp328.000,-</p>
+                </div>
+                <div class="col-lg-4 col-6 mt-3 date-payment">
+                  <h6>Tanggal</h6>
+                  <hr />
+                  <p>12 Desember 2024</p>
+                  <p>20 Januari 2021</p>
+                  <p>5 November 2023</p>
+                  <p>30 Februari 2020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 arrears-container">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="text-center border-bottom pb-4 pt-3">Tunggakan</h3>
+              </div>
+              <div class="row">
+                <div class="col-12 mt-2 text-center">
+                  <h6>Nama</h6>
+                  <hr />
+                  <p>
+                    Reza Nugraha
+                    <a href=""><i class="bi bi-info-circle"></i></a>
+                  </p>
+                  <p>
+                    Bintang Nurahman
+                    <a href=""><i class="bi bi-info-circle"></i></a>
+                  </p>
+                  <p>
+                    Alfariski Bugis
+                    <a href=""><i class="bi bi-info-circle"></i></a>
+                  </p>
+                  <p>
+                    Abdul Gofur <a href=""><i class="bi bi-info-circle"></i></a>
+                  </p>
+                  <p>
+                    Dani Kurnaidi
+                    <a href=""><i class="bi bi-info-circle"></i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Detail Database End -->
+
+    <!-- Bootstrap Javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
